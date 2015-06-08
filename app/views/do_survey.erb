@@ -1,0 +1,23 @@
+<div class="container">
+  <h1><%= @survey.title %></h1>
+
+  <form method = "Post" action ="/survey/<%= @survey.id %>/answers/new">
+  <% @survey.questions.each do |question| %>
+    <div align="center"></br>
+    <p><%= question.body %></p>
+    <% question.choices.each do |choice| %>
+      <input type="radio" name="choice[<%= choice.id %>]" value="<%= choice.body %>"><%= choice.body %><br>
+    <% end %>
+  <% end %>
+  <p class="submit"><input type="submit" value="Submit now!"></p>
+</div>
+
+
+<!-- <div align="center"><br>
+<input type="radio" name="group1" value="Milk"> Milk<br>
+<input type="radio" name="group1" value="Butter" checked> Butter<br>
+<input type="radio" name="group1" value="Cheese"> Cheese
+<hr>
+<input type="radio" name="group2" value="Water"> Water<br>
+<input type="radio" name="group2" value="Beer"> Beer<br>
+<input type="radio" name="group2" value="Wine" checked> Wine<br> -->

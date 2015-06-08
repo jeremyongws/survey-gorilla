@@ -1,0 +1,13 @@
+  <h1>Welcome to Survey Gorilla Results!</h1>
+
+  <h2><%= @survey.title %></h2>
+
+  <p><% @survey.questions.each do |question| %></p>
+
+  <p><%= question.body %></p>
+
+  <% question.choices.each do |c| %>
+
+  <p><%= c.body %> <%= c.users_choices.count %></p>
+  <% end %>
+  <% end %>

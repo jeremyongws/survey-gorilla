@@ -1,0 +1,32 @@
+<div class="container">
+  <h1>Welcome to Survey Gorilla!</h1>
+
+  <div class="create_survey">
+    <h1>Create a survey in less than 5 minutes.</h1>
+    <form method="post" action="/survey/new">
+      <p><input type="text" name="title" value="" placeholder="Insert your survey title."></p>
+      <div class ="question-field">
+        <div id ="question-1">
+          <p class="question1">
+          <textarea name="questions[1][question]" placeholder="Enter question here"></textarea>
+          </br>
+          </br>
+          <div class="choice-field-1">
+            <textarea name="questions[1][choice][1]" placeholder="Enter choice here"></textarea>
+          </div>
+          <button type="button1" class="choice_button" value="1">Add Choice</button>
+        </p>
+      </div>
+    </div>
+    <button type="button" class="question_button">Add Question</button>
+      <!-- <p class="choice1"><input type="text" name="choice1" value="" placeholder="Insert your Choice."></p> -->
+      <!-- <p class="choice"><textarea name="choice" placeholder="Enter choice here"></textarea></p> -->
+
+
+      <p class="submit"><input type="submit" name="commit" value="Create survey"></p>
+    </form>
+  </div>
+
+</div>
+
+

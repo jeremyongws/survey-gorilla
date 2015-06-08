@@ -3,7 +3,7 @@ class CreateQuestions < ActiveRecord::Migration
     create_table :questions do |q|
       q.integer :survey_id
       q.string :body
-      s.timestamps
+      q.timestamps
     end
   end
 end

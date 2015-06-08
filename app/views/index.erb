@@ -1,23 +1,30 @@
 <div class="container">
-  <h1>Welcome to Sinatra!</h1>
-  <p>Hello, world!</p>
+  <h1>Welcome to Survey Gorilla!</h1>
+  <p>We are Jeremy and Jalen!</p>
 
-  <table>
-    <tr>
-      <th>File Description</th>
-      <th>File Location</th>
-    </tr>
-    <tr>
-      <td>This view file</td>
-      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The layout file</td>
-      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The current controller</td>
-      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-  </table>
+  <div class="login">
+    <h1>Login to Web App</h1>
+    <form method="post" action="/login">
+      <p><input type="text" name="username" value="" placeholder="Username or Email"></p>
+
+      <p class="remember_me">
+        <label>
+          <input type="checkbox" name="remember_me" id="remember_me">
+          Remember me on this computer
+        </label>
+      </p>
+      <p class="submit"><input type="submit" name="commit" value="Login"></p>
+    </form>
+  </div>
+
+
+  <div class="sign_up">
+    <h1>Don't have an account? Sign Up Here!</h1>
+    <form method="post" action="/user/new">
+      <p><input type="text" name="username" value="" placeholder="Username or Email"></p>
+
+      <p class="submit"><input type="submit" name="commit" value="Get your free account"></p>
+    </form>
+  </div>
+
 </div>
